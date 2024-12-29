@@ -4,10 +4,13 @@
   "description": "The Shardus command line tool.",
   "main": "index.js",
   "scripts": {
-    "release": "np --no-cleanup --no-tests --no-yarn",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint",
-    "format-check": "prettier --check '**.js'"
+    "format-check": "prettier --check '**.js'",
+    "release:prerelease": "npm version prerelease --preid=prerelease && git push --follow-tags && npm publish --tag prerelease",
+    "release:patch": "npm version patch && git push --follow-tags && npm publish",
+    "release:minor": "npm version minor && git push --follow-tags && npm publish",
+    "release:major": "npm version major && git push --follow-tags && npm publish"
   },
   "repository": {
     "type": "git",
