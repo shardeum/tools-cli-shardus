@@ -1,5 +1,5 @@
 {
-  "name": "shardus",
+  "name": "@shardeum-foundation/tools-shardus-cli",
   "version": "4.3.0",
   "description": "The Shardus command line tool.",
   "main": "index.js",
@@ -7,6 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint",
     "format-check": "prettier --check '**.js'",
+    "compile": "tsc -p .",
+    "prepare": "npm run compile",
     "release:prerelease": "npm version prerelease --preid=prerelease && git push --follow-tags && npm publish --tag prerelease",
     "release:patch": "npm version patch && git push --follow-tags && npm publish",
     "release:minor": "npm version minor && git push --follow-tags && npm publish",
@@ -25,14 +27,16 @@
   "author": "Shardus",
   "license": "ISC",
   "dependencies": {
-    "@shardus/debug-tool": "git+https://github.com/shardeum/tools-shardus-cli-debugger#v1.0.2",
-    "@shardus/network-tool": "git+https://github.com/shardeum/tools-cli-shardus-network#v4.4.0",
+    "@shardeum-foundation/tools-shardus-cli-debugger": "1.0.2",
+    "@shardeum-foundation/tools-shardus-cli-network": "4.4.0",
     "caporal": "1.4.0",
     "shelljs": "0.8.5",
     "eslint": "8.43.0"
   },
   "devDependencies": {
     "standard": "13.1.0",
+    "@types/node": "18.19.1",
+    "typescript": "5.7.2",
     "eslint-config-prettier": "8.8.0",
     "eslint-plugin-security": "1.7.1",
     "prettier": "2.7.1",
