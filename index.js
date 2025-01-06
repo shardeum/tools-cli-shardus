@@ -1,5 +1,5 @@
-const shardusNetwork = require('@shardus/network-tool')
-const shardusDebug = require('@shardus/debug-tool')
+const shardusNetwork = require('@shardeum-foundation/tools-shardus-cli-network')
+const shardusDebug = require('@shardeum-foundation/tools-shardus-cli-debugger')
 
 module.exports = {
   register: {
