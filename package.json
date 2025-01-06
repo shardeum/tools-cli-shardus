@@ -41,5 +41,8 @@
     "eslint-plugin-security": "1.7.1",
     "prettier": "2.7.1",
     "np": "8.0.4"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
